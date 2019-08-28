@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+    <title>List</title>
+</head>
+<body>
+    <div>
+        <h1>List</h1>
+        <ul> 
+     
+            {% for record in all_records %}
+            <li>{{ record.name }} => {{ record.email }}</li>
+            {% endfor %}
+        </ul>
+        <p><a href="{% url 'edit' %}">Edit a record</a><br></p>
+        <p><a href="{% url 'home' %}">Home</a><br></p>
+    </div>
+</body>

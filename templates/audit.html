@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Audit</title>
+    <style>
+    table, th, td {
+  border: 1px solid black;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Audit</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Edited</th>
+            </tr>
+            {% for record in all_records %}
+            <tr>
+                <td>{{ record.name }}</td>
+                <td>{{ record.email }}</td>
+                <td>{{ record.is_edited }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p><a href="{% url 'home' %}">Home</a><br></p>
+</body>
